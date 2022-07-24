@@ -24,6 +24,7 @@ const start = async () => {
 
         new OrderCreatedListener(natsWrapper.client).listen();
     } catch (err) {
+        console.log('test');
         console.error(err);
     }
 }
