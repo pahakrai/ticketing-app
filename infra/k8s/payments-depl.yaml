@@ -4,7 +4,7 @@ metadata:
   name: payments-depl
 spec:
   replicas: 1
-  selector: 
+  selector:
     matchLabels:
       app: payments
   template:
@@ -14,18 +14,18 @@ spec:
     spec:
       containers:
         - name: payments
-          image: pahakrai/payments
-          env: 
+          image: thesystemgovern/payments
+          env:
             - name: NATS_CLIENT_ID
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.name
             - name: NATS_URL
-              value: 'https://nats-srv:4222'
+              value: "https://nats-srv:4222"
             - name: NATS_CLUSTER_ID
               value: ticketing
             - name: MONGO_URI
-              value: 'mongodb://payments-mongo-srv:27017/payments'
+              value: "mongodb://payments-mongo-srv:27017/payments"
             - name: JWT_KEY
               valueFrom:
                 secretKeyRef:
@@ -39,7 +39,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-metadata: 
+metadata:
   name: payments-srv
 spec:
   # default is cluster ip

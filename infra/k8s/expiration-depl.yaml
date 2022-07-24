@@ -4,7 +4,7 @@ metadata:
   name: expiration-depl
 spec:
   replicas: 1
-  selector: 
+  selector:
     matchLabels:
       app: expiration
   template:
@@ -14,14 +14,14 @@ spec:
     spec:
       containers:
         - name: expiration
-          image: pahakrai/expiration
-          env: 
+          image: thesystemgovern/expiration
+          env:
             - name: NATS_CLIENT_ID
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.name
             - name: NATS_URL
-              value: 'https://nats-srv:4222'
+              value: "https://nats-srv:4222"
             - name: NATS_CLUSTER_ID
               value: ticketing
             - name: REDIS_HOST

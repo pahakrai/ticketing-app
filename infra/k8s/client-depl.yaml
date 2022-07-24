@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: client-depl
-spec: 
+spec:
   replicas: 1
-  selector: 
+  selector:
     matchLabels:
       app: client
   template:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: pahakrai/client
+          image: thesystemgovern/client
 ---
 apiVersion: v1
 kind: Service

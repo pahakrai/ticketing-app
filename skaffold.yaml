@@ -9,52 +9,51 @@ build:
     # dont push to dockerhub
     push: false
   artifacts:
-    - image: pahakrai/auth
+    - image: thesystemgovern/auth
       context: auth
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: 'src/**/*.ts'
+          - src: "src/**/*.ts"
             dest: .
-    - image: pahakrai/client
+    - image: thesystemgovern/client
       context: client
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: '**/*.js'
+          - src: "**/*.js"
             dest: .
-    - image: pahakrai/tickets
+    - image: thesystemgovern/tickets
       context: tickets
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: 'src/**/*.ts'
+          - src: "src/**/*.ts"
             dest: .
-    - image: pahakrai/orders
+    - image: thesystemgovern/orders
       context: orders
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: 'src/**/*.ts'
+          - src: "src/**/*.ts"
             dest: .
-    - image: pahakrai/expiration
+    - image: thesystemgovern/expiration
       context: expiration
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: 'src/**/*.ts'
+          - src: "src/**/*.ts"
             dest: .
-    - image: pahakrai/payments
+    - image: thesystemgovern/payments
       context: payments
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: 'src/**/*.ts'
+          - src: "src/**/*.ts"
             dest: .
-    

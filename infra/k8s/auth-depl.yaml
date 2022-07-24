@@ -4,7 +4,7 @@ metadata:
   name: auth-depl
 spec:
   replicas: 1
-  selector: 
+  selector:
     matchLabels:
       app: auth
   template:
@@ -14,10 +14,10 @@ spec:
     spec:
       containers:
         - name: auth
-          image: pahakrai/auth
-          env: 
+          image: thesystemgovern/auth
+          env:
             - name: MONGO_URI
-              value: 'mongodb://auth-mongo-srv:27017/auth'
+              value: "mongodb://auth-mongo-srv:27017/auth"
             - name: JWT_KEY
               valueFrom:
                 secretKeyRef:
@@ -26,7 +26,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-metadata: 
+metadata:
   name: auth-srv
 spec:
   # default is cluster ip

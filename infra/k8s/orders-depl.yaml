@@ -4,7 +4,7 @@ metadata:
   name: orders-depl
 spec:
   replicas: 1
-  selector: 
+  selector:
     matchLabels:
       app: orders
   template:
@@ -14,18 +14,18 @@ spec:
     spec:
       containers:
         - name: orders
-          image: pahakrai/orders
-          env: 
+          image: thesystemgovern/orders
+          env:
             - name: NATS_CLIENT_ID
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.name
             - name: NATS_URL
-              value: 'https://nats-srv:4222'
+              value: "https://nats-srv:4222"
             - name: NATS_CLUSTER_ID
               value: ticketing
             - name: MONGO_URI
-              value: 'mongodb://orders-mongo-srv:27017/orders'
+              value: "mongodb://orders-mongo-srv:27017/orders"
             - name: JWT_KEY
               valueFrom:
                 secretKeyRef:
@@ -34,7 +34,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-metadata: 
+metadata:
   name: orders-srv
 spec:
   # default is cluster ip
