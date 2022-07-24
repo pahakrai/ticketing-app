@@ -2,6 +2,7 @@ import {scrypt, randomBytes} from 'crypto';
 import {promisify} from 'util';
 
 const scryptAsync = promisify(scrypt);
+console.log("walla");
 
 export class Password {
     // static classes are instance method without creating class
