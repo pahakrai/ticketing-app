@@ -10,7 +10,8 @@ export default ({ req }) => {
     } else {
         // we must be on the browser
         return axios.create({
-            baseUrl: '/'
+            baseUrl: 'http://www.pahakrai.xyz/',
+            headers: req.headers
         })
     }
 }
