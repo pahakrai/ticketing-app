@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "",
     "dev": "next"
   },
   "keywords": [],
@@ -13,9 +14,9 @@
     "@pr-tickets/common": "^1.0.5",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
-    "next": "^10.1.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "next": "^12.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-stripe-checkout": "^2.6.3"
   }
 }
