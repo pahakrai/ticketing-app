@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose, {ObjectId} from 'mongoose';
 import { Message } from 'node-nats-streaming';
 import { TicketCreatedEvent } from "@pr-tickets/common";
 import { natsWrapper } from "../../../nats-wrapper";
@@ -12,10 +12,10 @@ const setup = async () => {
     // crate fake data event
     const data: TicketCreatedEvent['data'] = {
         version: 0,
-        id: new new mongoose.Types.ObjectId().toHexString(),
+        id: new mongoose.Types.ObjectId().toHexString(),
         title: 'concert',
         price: 10,
-        userId: new new mongoose.Types.ObjectId().toHexString()
+        userId: new mongoose.Types.ObjectId().toHexString()
     };
 
     // create a fake message object

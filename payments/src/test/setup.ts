@@ -44,7 +44,7 @@ afterAll(async () => {
 });
 
 global.signin = (id?: string) => {
-    const userId = id || new new mongoose.Types.ObjectId().toHexString();
+    const userId = id || new mongoose.Types.ObjectId().toHexString();
     // Build a JWT payload. { id, email }
     const payload = {
         id: userId,

@@ -23,7 +23,7 @@ const setup = async () => {
         id: ticket.id,
         title: 'new concert',
         price: 999,
-        userId: new new mongoose.Types.ObjectId().toHexString()
+        userId: new mongoose.Types.ObjectId().toHexString()
     };
 
     // create a fake message object
