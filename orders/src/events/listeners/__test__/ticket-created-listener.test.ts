@@ -12,10 +12,10 @@ const setup = async () => {
     // crate fake data event
     const data: TicketCreatedEvent['data'] = {
         version: 0,
-        id: new mongoose.Types.ObjectId().toHexString(),
+        id: new new mongoose.Types.ObjectId().toHexString(),
         title: 'concert',
         price: 10,
-        userId: new mongoose.Types.ObjectId().toHexString()
+        userId: new new mongoose.Types.ObjectId().toHexString()
     };
 
     // create a fake message object

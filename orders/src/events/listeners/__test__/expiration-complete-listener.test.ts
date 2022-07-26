@@ -11,7 +11,7 @@ const setup = async () => {
     const listener = new ExpirationCompleteListener(natsWrapper.client);
 
     const ticket = await Ticket.build({
-        id: mongoose.Types.ObjectId().toHexString(),
+        id: new mongoose.Types.ObjectId().toHexString(),
         title: 'concert',
         price: 20
     });
