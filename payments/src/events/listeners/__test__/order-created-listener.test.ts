@@ -11,7 +11,7 @@ const setup = async () => {
 
     // Create the fake data event
     const data: OrderCreatedEvent['data'] = {
-        id: mongoose.Types.ObjectId().toHexString(),
+        id: new mongoose.Types.ObjectId().toHexString(),
         version: 0,
         status: OrderStatus.Create,
         userId: 'asdffk',

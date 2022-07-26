@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose, {ObjectId} from 'mongoose';
 import { Message } from 'node-nats-streaming';
 import { TicketCreatedEvent } from "@pr-tickets/common";
 import { natsWrapper } from "../../../nats-wrapper";
