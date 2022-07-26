@@ -22,6 +22,7 @@ var RequestValidationError = /** @class */ (function (_super) {
     function RequestValidationError(errors) {
         var _this = _super.call(this, 'Invalid Request') || this;
         _this.errors = errors;
+        // request validation error
         _this.statusCode = 400;
         // Only because we are extending a built in class
         Object.setPrototypeOf(_this, RequestValidationError.prototype);
