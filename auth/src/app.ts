@@ -37,6 +37,7 @@ app.use(signupRouter);
 // with async and import express-async-errors
 // as without express-async-errors would throw error
 app.all('*', async () => {
+    console.log("check error");
     throw new NotFoundError();
 });
 
