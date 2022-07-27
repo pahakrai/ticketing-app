@@ -20,7 +20,7 @@ beforeAll(async () => {
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
     mongo = MongoMemoryServer.create();
-    const mongoUri = await mongo.getUri();
+    const mongoUri = mongo.getUri();
     await mongoose.connect(mongoUri, {
         // useNewUrlParser: true,
         // useUnifiedTopology: true
