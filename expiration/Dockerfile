@@ -2,9 +2,9 @@ FROM node:alpine
 
 WORKDIR /app
 COPY package.json .
-# RUN yarn install --production
-RUN npm install
+RUN yarn install --production
+# RUN yarn install
 COPY . .
 
 
-CMD ["yarn", "start"]
+CMD ["yarn", "run", "start"]
