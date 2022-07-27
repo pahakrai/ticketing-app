@@ -6,4 +6,4 @@ RUN yarn install --production
 COPY . .
 
 
-CMD ["npm", "run", "dev"]
+CMD ["yarn", "run", "dev"]
